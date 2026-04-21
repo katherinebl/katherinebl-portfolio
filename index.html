@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Katherine Briceño — Frontend developer based in Madrid. Building clean, accessible interfaces with React, TypeScript and Vue.">
+  <title>Katherine Briceño — Frontend Developer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Nunito:wght@300;400;600&family=Inconsolata:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+
+      <a href="index.html" class="nav__brand">
+        Katherine<span>bl</span>
+      </a>
+
+      <div class="nav__right">
+        <ul class="nav__links" id="nav-links">
+          <li><a href="index.html"   class="nav__link active" data-page="home">Home</a></li>
+          <li><a href="about.html"   class="nav__link" data-page="about">About</a></li>
+          <li><a href="skills.html"  class="nav__link" data-page="skills">Skills</a></li>
+          <li><a href="contact.html" class="nav__link" data-page="contact">Contact</a></li>
+        </ul>
+
+        <div class="nav__controls">
+          <button class="nav__toggle" id="lang-toggle" aria-label="Switch language">EN</button>
+          <button class="nav__toggle" id="theme-toggle" aria-label="Switch theme">☀</button>
+        </div>
+
+        <button class="nav__hamburger" id="hamburger" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <main class="page-content">
+    <div class="container">
+
+      <section class="hero">
+        <h1 class="hero__name" data-i18n="hero.name">Katherine Briceño</h1>
+        <p class="hero__role" data-i18n="hero.role">Frontend developer</p>
+        <p class="hero__tagline" data-i18n="hero.tagline">
+          Turning complex problems into clean, accessible interfaces, with an eye for detail.
+        </p>
+        <div class="hero__cta">
+          <a href="contact.html" class="btn btn--primary" data-i18n="hero.cta.contact">Get in touch</a>
+          <a href="skills.html"  class="btn btn--secondary" data-i18n="hero.cta.skills">View skills</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__copy">
+        © 2025 <span>Katherine Briceño</span>. Built with care.
+      </p>
+      <div class="footer__links">
+        <a href="https://linkedin.com/in/katherinebl" class="footer__link" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/katherinebl"      class="footer__link" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:kath.gbl@gmail.com"           class="footer__link">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

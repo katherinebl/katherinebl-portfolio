@@ -1,0 +1,267 @@
+/* ============================================
+   katherinebl — Main Styles
+   Nav, footer, layout, utilities
+   ============================================ */
+
+/* ============================================
+   Layout
+   ============================================ */
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.page-content {
+  padding-top: calc(var(--nav-height) + var(--space-16));
+  padding-bottom: var(--space-24);
+  min-height: 100vh;
+}
+
+/* ============================================
+   Navigation
+   ============================================ */
+
+.nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+  transition: background-color var(--transition-base),
+              border-color var(--transition-base),
+              box-shadow var(--transition-base);
+}
+
+.nav.scrolled {
+  box-shadow: var(--shadow-sm);
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+/* Brand / logo */
+.nav__brand {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.nav__brand span {
+  color: var(--accent);
+}
+
+/* Links group */
+.nav__right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.nav__link {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.nav__link:hover {
+  color: var(--text-primary);
+}
+
+.nav__link.active {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.nav__link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* Controls: language + theme toggles */
+.nav__controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-left: var(--space-4);
+  padding-left: var(--space-4);
+  border-left: 1px solid var(--border);
+}
+
+.nav__toggle {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-secondary);
+  cursor: pointer;
+  transition: color var(--transition-fast),
+              border-color var(--transition-fast),
+              background-color var(--transition-fast);
+  line-height: 1.4;
+}
+
+.nav__toggle:hover {
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+
+.nav__toggle.active {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-subtle);
+}
+
+/* Mobile menu button (hidden on desktop) */
+.nav__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: var(--space-2);
+  margin-left: var(--space-2);
+}
+
+.nav__hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: transform var(--transition-base), opacity var(--transition-fast);
+}
+
+/* Mobile nav open state */
+.nav__hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav__hamburger.open span:nth-child(2) { opacity: 0; }
+.nav__hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ============================================
+   Responsive — Mobile nav
+   ============================================ */
+
+@media (max-width: 640px) {
+  .nav__links {
+    display: none;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-4) var(--space-6);
+    gap: var(--space-1);
+    box-shadow: var(--shadow-md);
+  }
+
+  .nav__links.open {
+    display: flex;
+  }
+
+  .nav__link {
+    width: 100%;
+    font-size: 15px;
+    padding: var(--space-3) var(--space-2);
+  }
+
+  .nav__hamburger {
+    display: flex;
+  }
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+
+.footer {
+  border-top: 1px solid var(--border);
+  padding: var(--space-8) 0;
+  margin-top: var(--space-24);
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  gap: var(--space-4);
+}
+
+.footer__copy {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.footer__copy span {
+  color: var(--accent);
+}
+
+.footer__links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.footer__link {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer__link:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .footer__inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-3);
+  }
+}

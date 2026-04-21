@@ -1,0 +1,50 @@
+/* ============================================
+   katherinebl — Components
+   Buttons, cards, chips, form elements
+   ============================================ */
+
+/* --- Buttons --- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--border-radius);
+  border: 1px solid transparent;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--transition-fast),
+              color var(--transition-fast),
+              border-color var(--transition-fast),
+              transform var(--transition-fast);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.btn--primary:hover {
+  background: var(--accent-light);
+  border-color: var(--accent-light);
+}
+
+.btn--secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+
+.btn--secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
