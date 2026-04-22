@@ -17,7 +17,6 @@
 </head>
 <body>
 
-  <!-- Backdrop for mobile drawer -->
   <div class="overlay" id="overlay"></div>
 
   <!-- ============ SIDEBAR ============ -->
@@ -49,9 +48,21 @@
           </a>
         </li>
         <li>
+          <a href="#experience" class="sidebar__link" data-navlink="experience">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            <span data-i18n="nav.experience">Experience</span>
+          </a>
+        </li>
+        <li>
           <a href="#skills" class="sidebar__link" data-navlink="skills">
             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
             <span data-i18n="nav.skills">Skills</span>
+          </a>
+        </li>
+        <li>
+          <a href="#languages" class="sidebar__link" data-navlink="languages">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span data-i18n="nav.languages">Languages</span>
           </a>
         </li>
         <li>
@@ -88,7 +99,6 @@
   <!-- ============ PAGE ============ -->
   <div class="page">
 
-    <!-- Top bar — visible only on mobile / tablet -->
     <header class="topbar" id="topbar">
       <div class="topbar__brand">
         <img src="assets/img/avatar.jpg" alt="" class="topbar__avatar">
@@ -144,8 +154,104 @@
           <span data-i18n="about.title">About me</span>
         </h2>
         <p class="section__text" data-i18n="about.bio">
-          Frontend developer focused on building clean, accessible interfaces. I enjoy turning complex problems into elegant solutions using React, TypeScript, and Vue. Based in Madrid, detail-oriented and always learning.
+          Frontend developer with over 6 years of experience crafting accessible, component-driven interfaces. With a background in Biology, I bring a curiosity-driven mindset and a taste for understanding systems from the ground up — qualities that translate naturally into writing clean, scalable code. I enjoy working in close collaboration with design and product teams, and I care deeply about the details that make an interface feel right.
         </p>
+
+      </section>
+
+      <hr class="section-divider">
+
+      <!-- EXPERIENCE -->
+      <section class="section" id="experience">
+        <h2 class="section__title">
+          <span class="section__icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </span>
+          <span data-i18n="experience.title">Work Experience</span>
+        </h2>
+        <div class="exp-list">
+
+          <div class="exp-card">
+            <div class="exp-card__header">
+              <div>
+                <p class="exp-card__role" data-i18n="exp.gig.role">Frontend Developer</p>
+                <p class="exp-card__company" data-i18n="exp.gig.company">Gaming Innovation Group</p>
+              </div>
+              <span class="exp-card__dates" data-i18n="exp.gig.dates">Aug 2023 – Jan 2026</span>
+            </div>
+            <p class="exp-card__desc" data-i18n="exp.gig.desc">Built reusable components in a shared monorepo library powering multiple brands, using Vue.js, TypeScript, and Web Components. Focused on scalability, performance, and accessibility throughout. Took part in production deployments via CI/CD pipelines and worked alongside Product, Design, QA, and Backend teams in an Agile environment.</p>
+          </div>
+
+          <div class="exp-card">
+            <div class="exp-card__header">
+              <div>
+                <p class="exp-card__role" data-i18n="exp.zooplus.role">Frontend Developer</p>
+                <p class="exp-card__company" data-i18n="exp.zooplus.company">Zooplus</p>
+              </div>
+              <span class="exp-card__dates" data-i18n="exp.zooplus.dates">Aug 2020 – Aug 2023</span>
+            </div>
+            <p class="exp-card__desc" data-i18n="exp.zooplus.desc">Built and maintained e-commerce UI components — banners, carousels, accordions — and contributed to high-traffic pages including the homepage and seasonal campaigns. Worked closely with Design and Content teams in an Agile environment, with accessibility and visual consistency as ongoing priorities.</p>
+          </div>
+
+          <div class="exp-card">
+            <div class="exp-card__header">
+              <div>
+                <p class="exp-card__role" data-i18n="exp.kairos.role">Frontend Developer</p>
+                <p class="exp-card__company" data-i18n="exp.kairos.company">Kairós Digital Solutions</p>
+              </div>
+              <span class="exp-card__dates" data-i18n="exp.kairos.dates">Mar 2019 – Aug 2020</span>
+            </div>
+            <p class="exp-card__desc" data-i18n="exp.kairos.desc">Joined a variety of client projects — from ad creatives for Vodafone to static websites — gaining solid grounding in professional frontend workflows. Applied design systems in Agile environments and collaborated across multidisciplinary teams.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <hr class="section-divider">
+
+      <!-- EDUCATION -->
+      <section class="section" id="education">
+        <h2 class="section__title">
+          <span class="section__icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </span>
+          <span data-i18n="education.title">Education</span>
+        </h2>
+        <div class="edu-list">
+
+          <div class="edu-card">
+            <div class="edu-card__main">
+              <p class="edu-card__degree" data-i18n="edu.urjc.degree">JavaScript Certification</p>
+              <p class="edu-card__institution" data-i18n="edu.urjc.institution">Universidad Rey Juan Carlos</p>
+            </div>
+            <span class="edu-card__year" data-i18n="edu.urjc.year">2019 – 2020</span>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-card__main">
+              <p class="edu-card__degree" data-i18n="edu.adalab.degree">Frontend Development Bootcamp</p>
+              <p class="edu-card__institution" data-i18n="edu.adalab.institution">Adalab</p>
+            </div>
+            <span class="edu-card__year" data-i18n="edu.adalab.year">2018 – 2019</span>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-card__main">
+              <p class="edu-card__degree" data-i18n="edu.cornell.degree">Scientific Communication in Biotechnology</p>
+              <p class="edu-card__institution" data-i18n="edu.cornell.institution">Cornell University</p>
+            </div>
+            <span class="edu-card__year" data-i18n="edu.cornell.year">2016</span>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-card__main">
+              <p class="edu-card__degree" data-i18n="edu.andes.degree">Bachelor's Degree in Biology</p>
+              <p class="edu-card__institution" data-i18n="edu.andes.institution">Universidad de los Andes</p>
+            </div>
+            <span class="edu-card__year" data-i18n="edu.andes.year">2013</span>
+          </div>
+
+        </div>
       </section>
 
       <hr class="section-divider">
@@ -170,6 +276,43 @@
           <span class="skill-chip">Jest</span>
           <span class="skill-chip">Chai</span>
           <span class="skill-chip">Playwright</span>
+        </div>
+
+        <h3 class="subsection__title" data-i18n="softskills.title">Professional Skills</h3>
+        <div class="skills-grid">
+          <span class="skill-chip skill-chip--soft" data-i18n="soft.problemsolving">Problem-solving</span>
+          <span class="skill-chip skill-chip--soft" data-i18n="soft.collaborative">Collaborative</span>
+          <span class="skill-chip skill-chip--soft" data-i18n="soft.detailoriented">Detail-oriented</span>
+          <span class="skill-chip skill-chip--soft" data-i18n="soft.continuouslearning">Continuous learning</span>
+          <span class="skill-chip skill-chip--soft" data-i18n="soft.adaptable">Adaptable</span>
+          <span class="skill-chip skill-chip--soft" data-i18n="soft.empathetic">Empathetic</span>
+          <span class="skill-chip skill-chip--soft" data-i18n="soft.communication">Communication</span>
+        </div>
+      </section>
+
+      <hr class="section-divider">
+
+      <!-- LANGUAGES -->
+      <section class="section" id="languages">
+        <h2 class="section__title">
+          <span class="section__icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </span>
+          <span data-i18n="languages.title">Languages</span>
+        </h2>
+        <div class="lang-list">
+          <div class="lang-item">
+            <span class="lang-item__name" data-i18n="lang.spanish">Spanish</span>
+            <span class="lang-item__level" data-i18n="lang.native">Native</span>
+          </div>
+          <div class="lang-item">
+            <span class="lang-item__name" data-i18n="lang.english">English</span>
+            <span class="lang-item__level" data-i18n="lang.c1">C1 – Advanced</span>
+          </div>
+          <div class="lang-item">
+            <span class="lang-item__name" data-i18n="lang.french">French</span>
+            <span class="lang-item__level" data-i18n="lang.a1">A1 – Basic</span>
+          </div>
         </div>
       </section>
 

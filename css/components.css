@@ -96,7 +96,6 @@
   font-size: var(--text-base);
   color: var(--text-secondary);
   line-height: 1.75;
-  max-width: 640px;
 }
 
 /* ============================================
@@ -193,12 +192,187 @@ a.hero__meta-item:hover {
   font-family: var(--font-mono);
   font-size: var(--text-sm);
   font-weight: 600;
-  color: var(--accent);
-  background: var(--accent-subtle);
-  border: 1px solid var(--accent);
+  color: var(--text-secondary);
+  background: var(--bg);
+  border: 1px solid var(--border-strong);
   border-radius: var(--border-radius);
   padding: var(--space-2) var(--space-4);
   cursor: default;
+  transition: color var(--transition-fast),
+              border-color var(--transition-fast),
+              background var(--transition-fast);
+}
+
+.skill-chip:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-subtle);
+}
+
+/* ============================================
+   Subsection title
+   ============================================ */
+
+.subsection__title {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: var(--space-10);
+  margin-bottom: var(--space-4);
+}
+
+/* ============================================
+   Experience cards
+   ============================================ */
+
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.exp-card {
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-6);
+  background: var(--bg-secondary);
+  transition: border-color var(--transition-fast);
+}
+
+.exp-card:hover {
+  border-color: var(--border-strong);
+}
+
+.exp-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.exp-card__role {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.exp-card__company {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.exp-card__dates {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.exp-card__desc {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+@media (max-width: 560px) {
+  .exp-card__header {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+}
+
+/* ============================================
+   Education cards
+   ============================================ */
+
+.edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.edu-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: var(--space-4) var(--space-5);
+  background: var(--bg-secondary);
+}
+
+.edu-card__degree {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.edu-card__institution {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.edu-card__year {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .edu-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+}
+
+/* ============================================
+   Languages
+   ============================================ */
+
+.lang-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 480px;
+}
+
+.lang-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  background: var(--bg-secondary);
+}
+
+.lang-item__name {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.lang-item__level {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
 }
 
 /* ============================================
@@ -212,6 +386,7 @@ a.hero__meta-item:hover {
   margin-top: calc(-1 * var(--space-4));
   margin-bottom: var(--space-8);
 }
+
 
 /* ============================================
    Contact form
