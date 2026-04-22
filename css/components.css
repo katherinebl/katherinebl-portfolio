@@ -209,6 +209,11 @@ a.hero__meta-item:hover {
   background: var(--accent-subtle);
 }
 
+.skill-chip--soft {
+  font-family: var(--font-body);
+  font-weight: 500;
+}
+
 /* ============================================
    Subsection title
    ============================================ */
