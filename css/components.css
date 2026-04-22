@@ -1,9 +1,11 @@
 /* ============================================
    katherinebl — Components
-   Buttons, cards, chips, form elements
+   Buttons, sections, hero, skills, contact
    ============================================ */
 
-/* --- Buttons --- */
+/* ============================================
+   Buttons
+   ============================================ */
 
 .btn {
   display: inline-flex;
@@ -23,9 +25,7 @@
               transform var(--transition-fast);
 }
 
-.btn:active {
-  transform: translateY(1px);
-}
+.btn:active { transform: translateY(1px); }
 
 .btn--primary {
   background: var(--accent);
@@ -47,4 +47,206 @@
 .btn--secondary:hover {
   border-color: var(--accent);
   color: var(--accent);
+}
+
+/* ============================================
+   Sections
+   ============================================ */
+
+.section {
+  padding: var(--space-10) 0;
+}
+
+.section:first-child {
+  padding-top: 0;
+}
+
+.section-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0;
+}
+
+.section__title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-6);
+}
+
+.section__icon-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.section__text {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: 1.75;
+  max-width: 640px;
+}
+
+/* ============================================
+   Hero
+   ============================================ */
+
+.hero__name {
+  font-family: var(--font-display);
+  font-size: var(--text-5xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: var(--space-1);
+}
+
+.hero__role-label {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: var(--space-5);
+}
+
+.hero__tagline {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 560px;
+  margin-bottom: var(--space-6);
+}
+
+.hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.hero__meta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a.hero__meta-item:hover {
+  color: var(--accent);
+}
+
+.hero__social {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast),
+              border-color var(--transition-fast),
+              background var(--transition-fast);
+}
+
+.social-icon:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-subtle);
+}
+
+/* ============================================
+   Skills
+   ============================================ */
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.skill-chip {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent);
+  border-radius: var(--border-radius);
+  padding: var(--space-2) var(--space-4);
+  cursor: default;
+}
+
+/* ============================================
+   Contact
+   ============================================ */
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 480px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border);
+  background: var(--bg-secondary);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast),
+              border-color var(--transition-fast),
+              background var(--transition-fast);
+}
+
+.contact-item:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-subtle);
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+
+@media (max-width: 640px) {
+  .hero__name {
+    font-size: var(--text-4xl);
+  }
+}
+
+@media (max-width: 400px) {
+  .hero__name {
+    font-size: var(--text-3xl);
+  }
 }

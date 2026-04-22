@@ -1,29 +1,54 @@
 /* ============================================
-   main.js — Nav scroll shadow + mobile menu
+   main.js — Sidebar drawer + scroll spy
    ============================================ */
 
 (function () {
-  const nav       = document.getElementById('nav');
-  const hamburger = document.getElementById('hamburger');
-  const navLinks  = document.getElementById('nav-links');
+  const sidebar      = document.getElementById('sidebar');
+  const overlay      = document.getElementById('overlay');
+  const hamburger    = document.getElementById('hamburger');
+  const sidebarClose = document.getElementById('sidebar-close');
+  const navLinks     = document.querySelectorAll('.sidebar__link');
+  const sections     = document.querySelectorAll('.section[id]');
 
-  // Add shadow to nav on scroll
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 10);
-  }, { passive: true });
+  function openSidebar() {
+    sidebar.classList.add('open');
+    overlay.classList.add('visible');
+    hamburger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
 
-  // Mobile hamburger toggle
-  hamburger.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
-    hamburger.classList.toggle('open', isOpen);
-    hamburger.setAttribute('aria-expanded', isOpen);
-  });
+  function closeSidebar() {
+    sidebar.classList.remove('open');
+    overlay.classList.remove('visible');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
 
-  // Close mobile menu on link click
-  navLinks.querySelectorAll('.nav__link').forEach(link => {
+  hamburger.addEventListener('click', openSidebar);
+  overlay.addEventListener('click', closeSidebar);
+  sidebarClose.addEventListener('click', closeSidebar);
+
+  navLinks.forEach(link => {
     link.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      hamburger.classList.remove('open');
+      if (window.innerWidth < 1024) closeSidebar();
     });
   });
+
+  // Scroll spy — highlight active section in the sidebar nav
+  function updateActiveLink() {
+    let current = sections[0]?.id || '';
+
+    sections.forEach(section => {
+      if (section.getBoundingClientRect().top <= 140) {
+        current = section.id;
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('data-navlink') === current);
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveLink, { passive: true });
+  updateActiveLink();
 })();
