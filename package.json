@@ -1,0 +1,8 @@
+{
+  "name": "katherinebl-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio — HTML, CSS & vanilla JS",
+  "scripts": {
+    "dev": "npx serve ."
+  }
+}
