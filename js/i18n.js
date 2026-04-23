@@ -14,7 +14,7 @@ const translations = {
 
     /* Hero */
     'hero.name':     'Katherine Briceño',
-    'hero.role':     'Frontend developer',
+    'hero.role':     'Frontend Developer | Biologist',
     'hero.tagline':  'Turning complex problems into clean, accessible interfaces, with an eye for detail.',
     'hero.location': 'Madrid, Spain',
 
@@ -100,7 +100,7 @@ const translations = {
 
     /* Hero */
     'hero.name':     'Katherine Briceño',
-    'hero.role':     'Frontend developer',
+    'hero.role':     'Frontend Developer | Bióloga',
     'hero.tagline':  'Convierto problemas complejos en interfaces limpias y accesibles, con atención al detalle.',
     'hero.location': 'Madrid, España',
 
