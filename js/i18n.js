@@ -56,11 +56,11 @@ const translations = {
     'skills.title':              'Technical Skills',
     'softskills.title':          'Professional Skills',
     'soft.problemsolving':       'Problem-solving',
-    'soft.collaborative':        'Collaborative',
+    'soft.collaborative':        'Collaboration',
     'soft.detailoriented':       'Detail-oriented',
     'soft.continuouslearning':   'Continuous learning',
-    'soft.adaptable':            'Adaptable',
-    'soft.empathetic':           'Empathetic',
+    'soft.adaptable':            'Adaptability',
+    'soft.empathetic':           'Empathy',
     'soft.communication':        'Communication',
 
     /* Languages */
@@ -94,7 +94,7 @@ const translations = {
     'nav.home':       'Inicio',
     'nav.about':      'Sobre mí',
     'nav.experience': 'Experiencia',
-    'nav.skills':     'Skills',
+    'nav.skills':     'Habilidades',
     'nav.languages':  'Idiomas',
     'nav.contact':    'Contacto',
 
@@ -142,11 +142,11 @@ const translations = {
     'skills.title':            'Habilidades Técnicas',
     'softskills.title':        'Habilidades Profesionales',
     'soft.problemsolving':     'Resolución de problemas',
-    'soft.collaborative':      'Colaboradora',
+    'soft.collaborative':      'Colaboración',
     'soft.detailoriented':     'Atención al detalle',
     'soft.continuouslearning': 'Aprendizaje continuo',
-    'soft.adaptable':          'Adaptable',
-    'soft.empathetic':         'Empática',
+    'soft.adaptable':          'Adaptación',
+    'soft.empathetic':         'Empatía',
     'soft.communication':      'Comunicación',
 
     /* Languages */
