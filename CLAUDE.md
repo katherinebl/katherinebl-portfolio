@@ -29,3 +29,11 @@ Single-page portfolio with a fixed sidebar on desktop (≥1024px) and a slide-in
 **Content changes:** Text rendered through the i18n system must be updated in both the `en` and `es` objects in `js/i18n.js`, plus the fallback text directly in `index.html` (used before JS runs). Static content not wired to i18n can be edited directly in `index.html`.
 
 **Design tokens:** All colors, spacing, and type sizes are CSS custom properties defined in `css/variables.css`. Prefer using existing tokens over hardcoded values.
+
+## Git
+
+Commit messages must be a single short line — no body, no bullet points, no `Co-Authored-By`.
+
+```
+feat: short description
+```
